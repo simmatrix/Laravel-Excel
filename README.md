@@ -1,6 +1,6 @@
 # Laravel Excel v2.1.* for Laravel 5
 
-> This is a forked version to fix the issue of failure to parse cells that are being formatted as date but contain non-date data. [Please checkout the "dev-bugfix" branch, branching out from the original 2.1.27 branch] 
+> This is a forked version to fix the issue of failure to parse cells that are being formatted as date but contain non-date data. [Please checkout the "bugfix" branch, branching out from the original 2.1.27 branch] 
 
 [<img src="http://www.maatwebsite.nl/img/excel_banner.jpg"/>](https://laravel-excel.maatwebsite.nl/)
 [<img src="https://cloud.githubusercontent.com/assets/7728097/6332170/1b495af2-bb84-11e4-9a93-34a9abc01840.jpg"/>](http://www.maatwebsite.nl/vacature-php-programmeur-maastricht)
@@ -41,7 +41,8 @@ Excel::create('Laravel Excel', function($excel) {
 
 # Installation
 
-As this is a forked version, to add this package into your application, edit your `composer.json` file 
+As this is a forked version, to add this package into your application, edit your `composer.json` file, then run `composer install` if it is a new install, or `composer update maatwebsite/excel` if you are trying to update your existing package from the original creator.
+
 ```
 {
     ...
