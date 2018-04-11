@@ -623,7 +623,10 @@ class ExcelParser {
      */
     protected function cellIsDate($index)
     {
-        // if is a date or if is a date column
+        // if is a date
+        if ( strtotime($this->cell->getValue()) === FALSE ) return FALSE;
+
+        // if is a date column
         if ( $this->reader->getDateColumns() )
         {
             return in_array($index, $this->reader->getDateColumns());
