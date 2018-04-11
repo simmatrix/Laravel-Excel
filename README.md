@@ -1,6 +1,6 @@
-## Laravel Excel v2.1.* for Laravel 5
+# Laravel Excel v2.1.* for Laravel 5
 
-Looking for Laravel Excel for Laravel 4? Visit the [`1.3` branch](https://github.com/Maatwebsite/Laravel-Excel/tree/1.3)
+> This is a forked version to fix the issue of failure to parse cells that are being formatted as date but contain non-date data. [Please checkout the "dev-bugfix" branch, branching out from the original 2.1.27 branch] 
 
 [<img src="http://www.maatwebsite.nl/img/excel_banner.jpg"/>](https://laravel-excel.maatwebsite.nl/)
 [<img src="https://cloud.githubusercontent.com/assets/7728097/6332170/1b495af2-bb84-11e4-9a93-34a9abc01840.jpg"/>](http://www.maatwebsite.nl/vacature-php-programmeur-maastricht)
@@ -41,10 +41,24 @@ Excel::create('Laravel Excel', function($excel) {
 
 # Installation
 
-Require this package in your `composer.json` and update composer. This will download the package and PHPExcel of PHPOffice.
+As this is a forked version, to add this package into your application, edit your `composer.json` file 
+```
+{
+    ...
 
-```php
-composer require "maatwebsite/excel:~2.1.0"
+    "require": {
+        "maatwebsite/excel": "dev-bugfix"
+    },
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/simmatrix/Laravel-Excel"
+        }
+    ]
+
+    ...
+}
 ```
 
 In Laravel 5.5 or higher, this package will be automatically discovered and you can safely skip the following two steps.
